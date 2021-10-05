@@ -29,7 +29,7 @@ generator.show_item_distribution()
 ```
 seq_bow = generator.sequential_bow
 ```
--未収束ユーザのBOWの取得
+- 未収束ユーザのBOWの取得
 ```
 random_bow = generator.seq_random_bow
 ```
