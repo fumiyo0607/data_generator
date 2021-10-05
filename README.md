@@ -32,6 +32,10 @@
 
 ![image](https://user-images.githubusercontent.com/37897800/135982499-a96204aa-1cba-4ddc-84d7-379bd080b842.png)
 
+### BoW
+- 長さ U の list として作成される
+- リストの各要素にはアイテムID（0,1,...,I-1）が格納されている
+
 ## Usage
 詳細は `example.ipython` を参照
 - インスタンスの作成
@@ -42,11 +46,11 @@ generator = Generator(U=1000,I=1600,K=8, item_num_s=50, noise_rato=0.05, seq_num
 ```
 generator.show_item_distribution()
 ```
-- 収束ユーザのBOWの取得
+- 収束ユーザのBOWの取得 (list)
 ```
 seq_bow = generator.sequential_bow
 ```
-- 未収束ユーザのBOWの取得
+- 未収束ユーザのBOWの取得 (list)
 ```
 random_bow = generator.seq_random_bow
 ```
