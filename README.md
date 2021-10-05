@@ -37,7 +37,7 @@
 - リストの各要素にはアイテムID（0,1,...,I-1）が格納されている
 
 ## Usage
-詳細は `example.ipython` を参照
+詳細は `exmaple.ipynb` を参照
 - インスタンスの作成
 ```
 generator = Generator(U=1000,I=1600,K=8, item_num_s=50, noise_rato=0.05, seq_num=5)
