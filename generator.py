@@ -6,8 +6,8 @@ import random
 import matplotlib.pyplot as plt
 from scipy.stats import norm
 import pickle
+import util
 
-# generater = Generator(U=100,I=8000,K=8)
 class Generator():
     def __init__(self, U, I, K, item_num_s = 200, noise_rate = 0.3, sigma = None, seq_num = 1):
         np.random.seed(seed=2021)
