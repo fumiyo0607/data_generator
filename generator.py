@@ -5,7 +5,6 @@ from collections import defaultdict
 import random
 import matplotlib.pyplot as plt
 from scipy.stats import norm
-import util
 import pickle
 
 # generater = Generator(U=100,I=8000,K=8)
