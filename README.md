@@ -2,15 +2,18 @@
 時系列トピックモデル用の擬似閲覧履歴データ生成スクリプト
 
 ## Parameters
-- U : ユーザ数 
-- I : アイテム数 
-- K : トピック数（2^n）
-- S : ステージ数，int(np.log2(K)) + 1（変更不可）
-- noise_rate : 各トピックの所属確率の最小値を決定すパラメータ（default : 0.3）
-- p_min 　　　: 各トピックの所属確率の最小値（(1/K) * self.noise_rate）（変更不可）
-- item_num_s : １ステージあたりの購買回数
-- sigma      : 単語分布の分散
-- seq_num    : 同一トピックのアイテムが連続して出現する回数
+
+| parameter | discripiton  |default setting | 
+| ---- | ---- |---- |
+| U | ユーザ数 |None|
+| I | アイテム数 |None|
+| K | トピック数（2^n）|None|
+| S | ステージ数（変更不可）|nt(np.log2(K)) + 1 |
+| noise_rate | 各トピックの所属確率の最小値を決定すパラメータ | 0.3 |
+| p_min 　　　| 各トピックの所属確率の最小値（変更不可）|(1/K) * self.noise_rate|
+| item_num_s | １ステージあたりの購買回数|200|
+| sigma      | 単語分布の分散| I / (K*6) |
+| seq_num    | 同一トピックのアイテムが連続して出現する回数|1|
 
 ## Usage
 詳細は `example.ipython` を参照
