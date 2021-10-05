@@ -11,7 +11,7 @@
 | S | ステージ数（変更不可）|K|
 | noise_rate | 各トピックの所属確率の最小値を決定すパラメータ | 0.3 |
 | p_min 　　　| 各トピックの所属確率の最小値（変更不可）|(1/K) * noise_rate|
-| item_num_s | １ステージあたりの購買回数|200|
+| item_num_s | １ステージあたりの閲覧回数|200|
 | sigma      | 単語分布の分散| I / (K*6) |
 | seq_num    | 同一トピックのアイテムが連続して出現する回数|1|
 
@@ -38,7 +38,6 @@
 
 ## Usage
 詳細は `exmaple.ipynb` を参照
-モデルの入力
 - インスタンスの作成
 ```
 generator = Generator(U=1000,I=1600, K=8, item_num_s=50, noise_rato=0.05, seq_num=1)
@@ -50,4 +49,22 @@ generator.show_item_distribution()
 - ユーザのBOWの取得 (list)
 ```
 bow = generator.bow
+```
+
+## Create input data
+詳細は `exmaple.ipynb` を参照
+- N_t ：　１時刻あたりの閲覧回数
+```
+N_t = 25
+
+T = int(len(bow[0]) / N_t)
+U = generator.U
+I = generator.I
+
+bow_input = np.zeros([U,T,I])
+for u in range(U):
+    for t in range(T):
+        bow_ut = bow[u][N_t*t:N_t*(t+1)]
+        for i in bow_ut:
+            bow_input[u,t,i] += 1
 ```
