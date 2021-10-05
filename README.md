@@ -32,7 +32,7 @@
 
 ![image](https://user-images.githubusercontent.com/37897800/135982499-a96204aa-1cba-4ddc-84d7-379bd080b842.png)
 
-### BoW
+### 閲覧履歴（BOW）
 - 長さ U の list として作成される
 - リストの各要素にはアイテムID（0,1,...,I-1）が格納されている
 
