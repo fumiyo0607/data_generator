@@ -21,7 +21,8 @@
 - このトピック以外の所属確率は (1/K) * noise_rate となる
 - ステージが変わるごとに過去の興味トピック以外のトピックを興味トピックとする
 
-![スクリーンショット 2021-10-05 16 55 10](https://user-images.githubusercontent.com/37897800/135983086-5884978b-3398-4658-970c-521b3e348fc8.png)
+<img width="1408" alt="スクリーンショット 2021-10-06 1 57 52" src="https://user-images.githubusercontent.com/37897800/136068672-9ee92ee6-0636-44fb-affc-9b6668d42f6c.png">
+
 
 
 ### 単語分布（アイテム分布）
