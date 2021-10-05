@@ -38,6 +38,7 @@
 
 ## Usage
 詳細は `exmaple.ipynb` を参照
+モデルの入力
 - インスタンスの作成
 ```
 generator = Generator(U=1000,I=1600, K=8, item_num_s=50, noise_rato=0.05, seq_num=1)
@@ -48,5 +49,5 @@ generator.show_item_distribution()
 ```
 - ユーザのBOWの取得 (list)
 ```
-seq_bow = generator.bow
+bow = generator.bow
 ```
